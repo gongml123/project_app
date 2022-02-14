@@ -1,0 +1,213 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		}, {
+			"path": "pages/fillIn/fillIn",
+			"style": {
+				"navigationBarTitleText": "变更通知",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/project/project",
+			"style": {
+				"navigationBarTitleText": "项目管理",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "指派的",
+							"fontSize": "13px",
+							"color": "#306BFF"
+						}]
+					}
+				}
+			}
+
+		}, {
+			"path": "pages/index/bulletin/bulletin",
+			"style": {
+				"navigationBarTitleText": "公告列表",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/NotificationDetails/NotificationDetails",
+			"style": {
+				"navigationBarTitleText": "公告详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/Upcoming/Upcoming",
+			"style": {
+				"navigationBarTitleText": "待办",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/Notice/Notice",
+			"style": {
+				"navigationBarTitleText": "通知",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/ChangeNotification/ChangeNotification",
+			"style": {
+				"navigationBarTitleText": "变更通知",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/toBeFilled/toBeFilled",
+			"style": {
+				"navigationBarTitleText": "待填报",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "预览",
+							"fontSize": "13px",
+							"color": "#306BFF"
+						}]
+					}
+				}
+			}
+
+		}, {
+			"path": "pages/index/pendingSubmit/pendingSubmit",
+			"style": {
+				"navigationBarTitleText": "待提交",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/pendingReview/pendingReview",
+			"style": {
+				"navigationBarTitleText": "待审核",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "授权",
+							"fontSize": "13px",
+							"color": "#306BFF"
+						}]
+					}
+				}
+			}
+
+		}, {
+			"path": "pages/index/agree/agree",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/Authorize/Authorize",
+			"style": {
+				"navigationBarTitleText": "授权",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/audit/audit",
+			"style": {
+				"navigationBarTitleText": "待审核",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/passed/passed",
+			"style": {
+				"navigationBarTitleText": "已通过",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/pass/pass",
+			"style": {
+				"navigationBarTitleText": "未通过",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/workingHours/workingHours",
+			"style": {
+				"navigationBarTitleText": "确认工时",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/preview/preview",
+			"style": {
+				"navigationBarTitleText": "预览",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/project/projectDetails/projectDetails",
+			"style": {
+				"navigationBarTitleText": "项目详情",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "记录",
+							"fontSize": "13px",
+							"color": "#306BFF"
+						}]
+					}
+				}
+			}
+
+		}
+
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "长安汽车",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#4694EB"
+	}
+	// "tabBar": {
+	// 	"backgroundColor": "#F7F8F9",
+	// 	"color": "#999999",
+	// 	"fontSize": "12px",
+	// 	"selectedColor": "#333333",
+	// 	"borderStyle": "whith",
+	// 	"iconWidth": "26px",
+	// 	"list": [{
+	// 		"text": "工作台",
+	// 		"iconPath": "static/tabbar/workbencha.png",
+	// 		"selectedIconPath": "static/tabbar/workbench.png",
+	// 		"pagePath": "pages/index/index"
+	// 	}, {
+	// 		"text": "填报",
+	// 		"iconPath": "static/tabbar/fillIna.png",
+	// 		"selectedIconPath": "static/tabbar/fillIn.png",
+	// 		"pagePath": "pages/fillIn/fillIn"
+	// 	}, {
+	// 		"text": "项目",
+	// 		"iconPath": "static/tabbar/projecta.png",
+	// 		"selectedIconPath": "static/tabbar/project.png",
+	// 		"pagePath": "pages/project/project"
+	// 	}]
+	// }
+}
