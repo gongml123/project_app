@@ -8,7 +8,7 @@ new Promise((resolve, reject) => {
 		method: parameter.method,
 		url: `http://dev.szlcar.com:8200/${parameter.url}`,
 		header: {
-			// Authorization:fn.getlocalStorageObject('userInfo')?(fn.getlocalStorageObject('userInfo').tokenHead+fn.getlocalStorageObject('userInfo').token):'',
+			Authorization: uni.getStorageSync('token'),
 			// 'content-type':'application/json',
 			// areaNo:store.state.address.areaNo
 		},

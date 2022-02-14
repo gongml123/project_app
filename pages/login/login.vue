@@ -5,15 +5,19 @@
 		<view class="from">
 			<view class="">
 				<view class="">账号</view>
-				<input type="text" placeholder="请输入账号" placeholder-style="color:#B1B1B1;font-size: 30rpx;" />
+				<input type="text" placeholder="请输入账号" v-model="username"
+					placeholder-style="color:#B1B1B1;font-size: 30rpx;" />
 			</view>
 			<view class="">
 				<view class="">密码</view>
-				<input type="text" placeholder="请输入密码" placeholder-style="color:#B1B1B1;font-size: 30rpx;" />
+				<input type="text" placeholder="请输入密码" v-model="password"
+					placeholder-style="color:#B1B1B1;font-size: 30rpx;" />
 			</view>
 		</view>
 		<view class="btn">
-			<button type="default" @click="submit">登录</button>
+			<button type="default" :class="{'button-active':username && password}" @click="submit">
+				<text>登录</text>
+			</button>
 		</view>
 		<view class="Forgot">忘记密码?</view>
 	</view>
@@ -24,20 +28,22 @@
 	export default {
 		data() {
 			return {
-
+				username: 'admin',
+				password: 'admin123456'
 			};
 		},
 		methods: {
 			submit() {
 				login.submitLogin({
-					password: "111111",
-					username: "admin"
+					password: this.password,
+					username: this.username
 				}).then(res => {
-					console.log(res);
+					uni.setStorageSync('token', res.data.access_token)
+					uni.navigateTo({
+						url: '../index/index'
+					})
 				})
-				// uni.navigateTo({
-				// 	url:'../index/index'
-				// })
+
 			}
 		}
 	}
@@ -75,10 +81,17 @@
 			font-weight: 600;
 			color: #F4F4F4;
 			line-height: 100rpx;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			&::after {
 				border: none;
 			}
+		}
+
+		.button-active {
+			background-color: #004483;
 		}
 	}
 

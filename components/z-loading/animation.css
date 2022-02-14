@@ -1,0 +1,11 @@
+@keyframes spinner-line-fade {
+
+	0%,
+	100% {
+		opacity: 0.22;
+	}
+
+	1% {
+		opacity: 1;
+	}
+}

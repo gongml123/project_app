@@ -9,9 +9,9 @@
 		</view>
 		<view style="height: 110rpx;"></view>
 		<view class="cnt-box">
-			<view class="box-type" v-for="(item,idx) in 3" :key="idx">
+			<view class="box-type" v-for="(item,idx) in projectList" :key="idx">
 				<view class="box-type-t" @click="idxId = idx">
-					<view class="">乘用车项目</view>
+					<view class="">{{item.projectName}}</view>
 					<uni-icons :type="idx == idxId ? 'bottom':'right'" color="#666666" size="18"></uni-icons>
 				</view>
 				<view class="box-type-c" v-if="idx == idxId">
@@ -43,15 +43,24 @@
 </template>
 
 <script>
+	import project from '../../api/project.js'
 	export default {
 		data() {
 			return {
-				idxId: 0
+				idxId: 0,
+				projectList: []
 			};
 		},
 		onNavigationBarButtonTap() {
 			uni.navigateTo({
-				url:'/pages/project/projectDetails/projectDetails'
+				url: '/pages/project/projectDetails/projectDetails'
+			})
+		},
+		onLoad() {
+			project.getProjectList().then(({
+				rows
+			}) => {
+				this.projectList = rows
 			})
 		}
 	}
